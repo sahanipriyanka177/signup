@@ -1,0 +1,41 @@
+<div class="container-fluid" style="margin-top:20px;padding-bottom: 50px;">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://cdn2.iconfinder.com/data/icons/flat-style-svg-icons-part-1/512/user_login_man-1024.png"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form (ngSubmit)="login()">
+          <div class="divider d-flex align-items-center my-4">
+            <h2 class="text-center fw-bold mx-3 mb-0" sty
+            le="color:rgb(138, 8, 86)">Login Here</h2>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email"  required id="email" name="email" class="form-control form-control-lg"
+              placeholder="Enter a valid email address" [(ngModel)]="loginuser.email" />
+            <label class="form-label" for="email">Email address</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <input type="password"  id="password" name="password" class="form-control form-control-lg"
+              placeholder="Enter password" [(ngModel)]="loginuser.password" />
+            <label class="form-label" for="password">Password</label>
+          </div>
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button routerLink="#" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+            <h3 class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? &nbsp;
+              <a routerLink="/register" class="link-danger">Register</a></h3>
+            </div>
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <h3 class="small fw-bold mt-2 pt-1 mb-0">already login!! &nbsp;
+              <a routerLink="/home" class="link-danger">Home</a></h3>
+          </div>
+        
+        </form>
+      </div>
+    </div>
+  </div>
